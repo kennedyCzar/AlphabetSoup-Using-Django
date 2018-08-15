@@ -89,7 +89,9 @@ expense of space complexity.
   ###### False output
   ![Image of Django App](https://github.com/kennedyCzar/AlphabetSoup-Using-Django/blob/master/IMAGES/false%20output.PNG)
 
-```Conclusion:
+##### Final words
+```
+
 The AlphaSoup algorithm is sort-like algorithm which is capable of telling if a
 message can me form from a wordcloud or soup.
 In addition to this i have demostrated how you can use 
