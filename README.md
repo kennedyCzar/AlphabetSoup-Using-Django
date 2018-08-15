@@ -81,6 +81,11 @@ expense of space complexity.
  
  #### DjangoApp for AlphabetSoup
  
+ ###### Before input
  ![Image of Django App](https://github.com/kennedyCzar/AlphabetSoup-Using-Django/blob/master/IMAGES/djangoApp.PNG)
  
+  ###### True Output
+  ![Image of Django App](https://github.com/kennedyCzar/AlphabetSoup-Using-Django/blob/master/IMAGES/true%20output.PNG)
+  ###### False output
+   ![Image of Django App](https://github.com/kennedyCzar/AlphabetSoup-Using-Django/blob/master/IMAGES/false%20output.PNG)
 ........In progress
