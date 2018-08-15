@@ -23,6 +23,7 @@ class AlphabetSoup(object):
 #            if self.message is None and self.alphabet is not None:
 #                if self.message is not None and self.alphabet is None:
 #                    return None
+    
         
     def is_empty(self, structure):
         '''
@@ -36,6 +37,8 @@ class AlphabetSoup(object):
                 @True: If Structure is not empty
                 @False: if struture is empty
         '''
+        self.structure = structure
+        
         if not self.structure:
             return True
         else:
@@ -50,7 +53,7 @@ class AlphabetSoup(object):
             @Fasle: Otherwise
         '''
         
-        character = self.character
+#        character = self.character
         self.message_count = {}
         self.alphabet_count = {}
         #Exception to handle Unprecedented errors
@@ -78,21 +81,18 @@ class AlphabetSoup(object):
             pass
         
         #read all the letters in the message string
-        for character in self.message:
-            self.message_count[character] = self.message_count(character, 0) + 1
+        for ii in self.message:
+            self.message_count[ii] = self.message_count.get(ii, 0) + 1
             #Repeat for alphabet
-            for character in self.alphabet:
-                self.alphabet_count[character] = self.alphabet_count(character, 0) + 1
+            for ii in self.alphabet:
+                self.alphabet_count[ii] = self.alphabet_count.get(ii, 0) + 1
                 #if the length of the alphabets is lower than the 
                 #let of the message..No need to proceed..return False
                 #Else return True
-                for character, value in self.message_count.items():
-                    if self.alphabet_count.get(character, 0) < value:
+                for ii, value in self.message_count.items():
+                    if self.alphabet_count.get(ii, 0) < value:
                         return False
         return True
-            
-            
-            
             
             
             
