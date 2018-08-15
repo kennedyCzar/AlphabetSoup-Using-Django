@@ -24,8 +24,10 @@ You may write the function in any programming language you prefer - but please c
 In case that you need more time or you have some questions, please, feel free to contact me.  
 
 ## Solution is Contained inside the Script folder
-#How to Use
+### How to Use
 
-'''git clone https://github.com/kennedyCzar/AlphabetSoup-Using-Django'''
+```bash
+git clone https://github.com/kennedyCzar/AlphabetSoup-Using-Django
+```
 
 ........In progress
