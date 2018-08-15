@@ -89,9 +89,12 @@ expense of space complexity.
   ###### False output
   ![Image of Django App](https://github.com/kennedyCzar/AlphabetSoup-Using-Django/blob/master/IMAGES/false%20output.PNG)
 
-Conclusion:
+```Conclusion:
 The AlphaSoup algorithm is sort-like algorithm which is capable of telling if a message can me form from a wordcloud or soup.
 In addition to this i have demostrated how you can use this in a django application. It would be great to have a database but
 is for dmonstration purpose and a database is not required at this point. Perhaps you coulc consider a database when hosting and trying to check users.
 Again this is license opensource and contributions to improve the algoritm are welcomed.
+```
+
+
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/kennedyCzar/AlphabetSoup-Using-Django/issues)
