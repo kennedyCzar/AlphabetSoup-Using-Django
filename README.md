@@ -23,6 +23,31 @@ Try to make your function efficient.  Please use Big-O notation to explain how l
 
 ```bash
 git clone https://github.com/kennedyCzar/AlphabetSoup-Using-Django
+
+Unpack the zip file into any dirctory of choice on your local drive.
+
+You can run the script file directly from the testBB.py file.
+
+To use the Django application
+------------------------------------------
+>conda install django
+OR
+>pip install django
+
+>Open anaconda propmt
+Navigate to the dirctory where you unpacked the zipped file
+
+>Enter into the Djnago project folder
+>cd /DJANGO/AlphabetSoup
+>dir
+(This command checks the file in the AlphabetSoup directory.
+Ensure you are in the folder that contains the manage.py file)
+then run the command
+>python manage.py runserver
+(This should start django on the localhost and ip 8000 or 8050
+depending on which is open.) OR specify your own ip and port
+>python manage.py runserver ip:port
+>Enter the ip:port in any browser of choice(preferably chrome)
 ```
 
 ##### Algorithm core
