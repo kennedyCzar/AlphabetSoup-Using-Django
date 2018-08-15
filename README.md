@@ -30,7 +30,7 @@ In case that you need more time or you have some questions, please, feel free to
 git clone https://github.com/kennedyCzar/AlphabetSoup-Using-Django
 ```
 
-##### algorithm core
+##### Algorithm core
 ```python
 for ii in self.message:
             self.message_count[ii] = self.message_count.get(ii, 0) + 1
