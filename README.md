@@ -30,4 +30,33 @@ In case that you need more time or you have some questions, please, feel free to
 git clone https://github.com/kennedyCzar/AlphabetSoup-Using-Django
 ```
 
+##### Algorithm core
+```python
+for ii in self.message:
+            self.message_count[ii] = self.message_count.get(ii, 0) + 1
+            #Repeat for alphabet
+            for ii in self.alphabet:
+                self.alphabet_count[ii] = self.alphabet_count.get(ii, 0) + 1
+                #if the length of the alphabets is lower than the 
+                #let of the message..No need to proceed..return False
+                #Else return True
+                for ii, value in self.message_count.items():
+                    if self.alphabet_count.get(ii, 0) < value:
+                        return False
+        return True
+```
+```bash
+Advantage of algorithm
+
+1. Time Efficient: Could be time consuming also considering it loops in N
+2. Time Coplexity: O(N**2 − N + 1) == O(N**2) Linear time
+3. Space complexity: O(1) space efficient.
+4. We could decide making it Very fast by treating the different loops
+seperate. that would give us a time complexity of O(N) + O(N) = O(N) at the
+expense of space complexity.
+ 
+ See Tim Wilson's sort algorithm for further Read https://en.wikipedia.org/wiki/Timsort
+ ```
+ 
+ 
 ........In progress
