@@ -18,3 +18,7 @@ list_ex = [23, 34, 54, 12, 65, 23, 65, 78, 65, 28, 34]
 c = sort(list_ex)
 c.bubblesort()
 c.quicksort()
+
+#%% Alphabet soup
+
+from AlphabetSoup import Alphabet
