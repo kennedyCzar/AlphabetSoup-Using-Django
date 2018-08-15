@@ -1,6 +1,8 @@
-from django.urls import path
+from django.conf.urls import url
 from . import views
 
+#urls pattarns as created in views
+
 urlpatterns = [
-    path(r'^$', views.index.as_view(), name = 'index'),
+    url('^$', views.index.as_view(), name = 'index'),
 ]
