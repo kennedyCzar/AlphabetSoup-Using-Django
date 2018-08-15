@@ -65,8 +65,9 @@ for ii in self.message:
                         return False
         return True
 ```
+
+#### Advantage of algorithm
 ```bash
-Advantage of algorithm
 
 1. Time Efficient: Could be time consuming also considering it loops in N
 2. Time Coplexity: O(N**2 − N + 1) == O(N**2) 
