@@ -21,4 +21,8 @@ c.quicksort()
 
 #%% Alphabet soup
 
-from AlphabetSoup import Alphabet
+from AlphabetSoup import AlphabetSoup
+
+
+c = AlphabetSoup('grheytheytht', 'grheytheytht')
+me = c.Alphabet()

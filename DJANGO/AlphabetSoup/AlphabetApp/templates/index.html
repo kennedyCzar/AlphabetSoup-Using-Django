@@ -41,14 +41,21 @@
               <h1 class="mb-3">AlphabetSoup App</h1>
               <p class="mb-5">Django application to demonstrate the alphabetSoup algorithm
                 <strong>2018, August 15th</strong>Published in Support of Opensource</p>
-                <form action="">
+                <form method="GET">
+                {% csrf_token %}
                 <div class="form-control input-group-newsletter">
                 <input name = 'message' type="text" class="form-control" placeholder="Message" >
                 <input name = 'alphabets' type="text" class="form-control" placeholder="Alphabets">
-                <button class="btn btn-secondary" type="button">Check</button>
+                <button class="btn btn-secondary" type="submit">Check</button>
               </div>
-                </form>
-
+                </form><br>
+                {% if output == True %}
+                <button class="btn btn-secondary" type="text" style="background-color: green">Result: {{ output }}</button>
+                {% elif output == False %}
+                <button class="btn btn-secondary" type="text" style="background-color: red">Result: {{ output }}</button>
+                {% else %}
+                <button class="btn btn-secondary" type="text" style="display: None">Result: {{ output }}</button>
+                {% endif %}
             </div>
           </div>
         </div>

@@ -10,19 +10,8 @@ class index(TemplateView):
     redirect_name = 'login_page'
     def get(self, request, **kwargs):
         if request.method == 'GET':
-            return render(request, self.template_name, context = None)
-
-
-class alphabet(TemplateView):
-    template_name = 'index.html'
-    login_url = 'index.html'
-    redirect_name = 'login_page'
-
-    def post(self, request, **kwargs):
-        if request.method == 'POST':
-            self.message = request.POST.get('message')
-            self.alphabets = request.POST.get('alphabets')
-            asoup = AlphabetSoup(self.message, self.alphabets)
-            asoup.Alphabet()
-            return render(request, self.template_name, context = asoup.Alphabet())
-    pass
+            self.message = request.GET.get('message')
+            self.alphabets = request.GET.get('alphabets')
+            asoup = AlphabetSoup.AlphabetSoup(self.message, self.alphabets)
+            output = asoup.Alphabet()
+            return render(request, self.template_name, {'output': output})
