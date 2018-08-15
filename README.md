@@ -44,7 +44,7 @@ for ii in self.message:
 Advantage of algorithm
 
 1. Time Efficient: Could be time consuming also considering it loops in N
-2. Time Coplexity: O(N**2 − N + 1) == O(N**2) Linear time
+2. Time Coplexity: O(N**2 − N + 1) == O(N**2) 
 3. Space complexity: O(1) space efficient.
 4. We could decide making it Very fast by treating the different loops
 seperate. that would give us a time complexity of O(N) + O(N) = O(N) at the
