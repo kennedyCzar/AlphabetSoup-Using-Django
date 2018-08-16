@@ -3,7 +3,19 @@
 Created on Wed Aug 15 14:00:37 2018
 
 @author: kennedy
+
 """
+
+'''
+AlphabetSoup algorithm
+--------------------------
+Algorithm sorts a dictionary of words compares
+them and return a boolean if a word 'message'
+can be formed from alphabet 'wordsoup'
+Time Cmomplexity: O(M*N) --> Worst case
+Space complexity: O(1)
+
+'''
 
 class AlphabetSoup(object):
     def __init__(self, message, alphabet):
