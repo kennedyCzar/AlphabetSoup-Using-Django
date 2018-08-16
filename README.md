@@ -70,7 +70,7 @@ for ii in self.message:
 ```bash
 
 1. Time Efficient: Could be time consuming also considering it loops in N
-2. Time Coplexity: O(N**2 − N + 1) == O(N**2) 
+2. Time Coplexity: O(M*N)
 3. Space complexity: O(1) space efficient.
 4. We could decide making it Very fast by treating the different loops
 seperate. that would give us a time complexity of O(N) + O(N) = O(N) at the
@@ -81,6 +81,25 @@ expense of space complexity.
  
  #### DjangoApp for AlphabetSoup
  
+ ###### Before input
  ![Image of Django App](https://github.com/kennedyCzar/AlphabetSoup-Using-Django/blob/master/IMAGES/djangoApp.PNG)
  
-........In progress
+  ###### True Output
+  ![Image of Django App](https://github.com/kennedyCzar/AlphabetSoup-Using-Django/blob/master/IMAGES/true%20output.PNG)
+  ###### False output
+  ![Image of Django App](https://github.com/kennedyCzar/AlphabetSoup-Using-Django/blob/master/IMAGES/false%20output.PNG)
+
+##### Final words
+```
+
+The AlphaSoup algorithm is sort-like algorithm which is capable of telling if a
+message can me form from a wordcloud or soup.
+In addition to this i have demostrated how you can use 
+this in a django application. It would be great to have a database but
+is for dmonstration purpose and a database is not required at this point. 
+Perhaps you coulc consider a database when hosting and trying to check users.
+Again this is license opensource and contributions to improve the algoritm are welcomed.
+```
+
+
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/kennedyCzar/AlphabetSoup-Using-Django/issues)
