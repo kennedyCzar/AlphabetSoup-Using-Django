@@ -73,7 +73,7 @@ for ii in self.message:
 2. Time Coplexity: O(M*N)
 3. Space complexity: O(1) space efficient.
 4. We could decide making it Very fast by treating the different loops
-seperate. that would give us a time complexity of O(N) + O(N) = O(N) at the
+seperate. that would give us a time complexity of O(M) + O(N) = O(N) at the
 expense of space complexity.
  
  See Tim Wilson's sort algorithm for further Read https://en.wikipedia.org/wiki/Timsort
