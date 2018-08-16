@@ -128,7 +128,8 @@ class AlphabetSoup(object):
             #if the length of the alphabets is lower than the 
             #let of the message..No need to proceed..return False
             #Else return True
-        return self.comp(self.message_count, self.alphabet_count), 'Execution time: {}'.format(time.clock() - self.time)
+        self.finnish = time.clock() - self.time()
+        return self.comp(self.message_count, self.alphabet_count), self.finnish
             
             
             
