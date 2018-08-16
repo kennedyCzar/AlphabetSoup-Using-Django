@@ -52,29 +52,37 @@ depending on which is open.) OR specify your own ip and port
 
 ##### Algorithm core
 ```python
+
+#read all the letters in the message string
 for ii in self.message:
-            self.message_count[ii] = self.message_count.get(ii, 0) + 1
-            #Repeat for alphabet
-            for ii in self.alphabet:
-                self.alphabet_count[ii] = self.alphabet_count.get(ii, 0) + 1
-                #if the length of the alphabets is lower than the 
-                #let of the message..No need to proceed..return False
-                #Else return True
-                for ii, value in self.message_count.items():
-                    if self.alphabet_count.get(ii, 0) < value:
-                        return False
-        return True
+    self.message_count[ii] = self.message_count.get(ii, 0) + 1
+#Repeat for alphabet
+for ii in self.alphabet:
+    self.alphabet_count[ii] = self.alphabet_count.get(ii, 0) + 1
+    #if the length of the alphabets is lower than the 
+    #let of the message..No need to proceed..return False
+    #Else return True
+return self.compare(self.message_count, self.alphabet_count), time.clock() - self.time
+
+#Compare function
+ if sum(self.alphabet_count.values()) > sum(self.message_count.values()):
+    self.compare = set(self.message_count).issubset(set(self.alphabet_count))
+    if self.compare == True:
+      return True
+    else:
+      return False
+  else:
+    raise ValueError('message cannot be greater than alphabet')
 ```
 
 ##### Advantage of algorithm
 ```bash
 
 1. Time Efficient: Could be time consuming also considering it loops in N
-2. Time Coplexity: O(M*N)
+2. Time Complexity: O(M) + O(N) = O(N)--> Worst case :: Linear time
 3. Space complexity: O(1) space efficient.
-4. We could decide making it Very fast by treating the different loops
-seperate. that would give us a time complexity of O(M) + O(N) = O(N) at the
-expense of space complexity.
+4. Running in O(M * N) is a little time consuming in the order of 4.7exp(-5) but the algorithm runs
+in time within 1.2exp(-5) which is quite reasonable. This is a good thing as O(M * N) is computational expensive for deployment.
  
  See Tim Wilson's sort algorithm for further Read https://en.wikipedia.org/wiki/Timsort
  ```

@@ -58,6 +58,7 @@ class AlphabetSoup(object):
             return False
     
     def comp(self, message_count, alphabet_count):
+<<<<<<< HEAD
         '''
         This fuction assets the message and alphabet count.
         Checks if the alphabet contains words need to make the message
@@ -80,6 +81,16 @@ class AlphabetSoup(object):
                 raise ValueError('message cannot be greater than alphabet')
         except RuntimeError as e:
             raise(e)
+=======
+      if sum(self.alphabet_count.values()) >= sum(self.message_count.values()):
+        self.compare = set(self.message_count).issubset(set(self.alphabet_count))
+        if self.compare == True:
+          return True
+        else:
+          return False
+      else:
+        raise ValueError('message cannot be greater than alphabet')
+>>>>>>> 342ca6fbf7b72dbe17aa30414fd5810a01a7e5b8
         
     def Alphabet(self):
         '''
@@ -128,7 +139,10 @@ class AlphabetSoup(object):
             #let of the message..No need to proceed..return False
             #Else return True
         return self.comp(self.message_count, self.alphabet_count), time.clock() - self.time
+<<<<<<< HEAD
             
+=======
+>>>>>>> 342ca6fbf7b72dbe17aa30414fd5810a01a7e5b8
             
             
             
