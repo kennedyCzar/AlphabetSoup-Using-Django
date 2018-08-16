@@ -57,7 +57,7 @@ class AlphabetSoup(object):
         else:
             return False
     
-    def compare(self, message_count, alphabet_count):
+    def comp(self, message_count, alphabet_count):
       if sum(self.alphabet_count.values()) > sum(self.message_count.values()):
         self.compare = set(self.message_count).issubset(set(self.alphabet_count))
         if self.compare == True:
@@ -113,7 +113,7 @@ class AlphabetSoup(object):
             #if the length of the alphabets is lower than the 
             #let of the message..No need to proceed..return False
             #Else return True
-        return self.compare(self.message_count, self.alphabet_count), time.clock() - self.time
+        return self.comp(self.message_count, self.alphabet_count), time.clock() - self.time
             
             
             
