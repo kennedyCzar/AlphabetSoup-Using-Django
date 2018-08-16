@@ -58,7 +58,7 @@ class AlphabetSoup(object):
             return False
     
     def comp(self, message_count, alphabet_count):
-      if sum(self.alphabet_count.values()) > sum(self.message_count.values()):
+      if sum(self.alphabet_count.values()) >= sum(self.message_count.values()):
         self.compare = set(self.message_count).issubset(set(self.alphabet_count))
         if self.compare == True:
           return True
