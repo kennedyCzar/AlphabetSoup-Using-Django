@@ -29,7 +29,8 @@ class AlphabetSoup(object):
         '''
         self.message = message
         self.alphabet = alphabet
-        
+        self.message_count = {}
+        self.alphabet_count = {}
 #        #Check for None
 #        if self.message is None and self.alphabet is None:
 #            if self.message is None and self.alphabet is not None:
@@ -56,6 +57,16 @@ class AlphabetSoup(object):
         else:
             return False
     
+    def compare(self, message_count, alphabet_count):
+      if sum(self.alphabet_count.values()) > sum(self.message_count.values()):
+        self.compare = set(self.message_count).issubset(set(self.alphabet_count))
+        if self.compare == True:
+          return True
+        else:
+          return False
+      else:
+        raise ValueError('message cannot be greater than alphabet')
+        
     def Alphabet(self):
         '''
         Argument:
@@ -66,8 +77,7 @@ class AlphabetSoup(object):
         '''
         
 #        character = self.character
-        self.message_count = {}
-        self.alphabet_count = {}
+        
         #Exception to handle Unprecedented errors
         try:
             '''
@@ -92,19 +102,18 @@ class AlphabetSoup(object):
         finally:
             pass
         
+        import time
+        self.time = time.clock()
         #read all the letters in the message string
         for ii in self.message:
             self.message_count[ii] = self.message_count.get(ii, 0) + 1
-            #Repeat for alphabet
-            for jj in self.alphabet:
-                self.alphabet_count[jj] = self.alphabet_count.get(jj, 0) + 1
-                #if the length of the alphabets is lower than the 
-                #let of the message..No need to proceed..return False
-                #Else return True
-                for kk, value in self.message_count.items():
-                    if self.alphabet_count.get(kk, 0) < value:
-                        return False
-        return True
+        #Repeat for alphabet
+        for ii in self.alphabet:
+            self.alphabet_count[ii] = self.alphabet_count.get(ii, 0) + 1
+            #if the length of the alphabets is lower than the 
+            #let of the message..No need to proceed..return False
+            #Else return True
+        return self.compare(self.message_count, self.alphabet_count), time.clock() - self.time
             
             
             
