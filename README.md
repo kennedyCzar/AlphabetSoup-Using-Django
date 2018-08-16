@@ -65,14 +65,14 @@ for ii in self.alphabet:
 return self.compare(self.message_count, self.alphabet_count), time.clock() - self.time
 
 #Compare function
-if sum(self.alphabet_count.values()) > sum(self.message_count.values()):
-        self.compare = set(self.message_count).issubset(set(self.alphabet_count))
-        if self.compare == True:
-          return True
-        else:
-          return False
-      else:
-        raise ValueError('message cannot be greater than alphabet')
+ if sum(self.alphabet_count.values()) > sum(self.message_count.values()):
+    self.compare = set(self.message_count).issubset(set(self.alphabet_count))
+    if self.compare == True:
+      return True
+    else:
+      return False
+  else:
+    raise ValueError('message cannot be greater than alphabet')
 ```
 
 ##### Advantage of algorithm
