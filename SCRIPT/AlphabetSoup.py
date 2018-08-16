@@ -96,13 +96,13 @@ class AlphabetSoup(object):
         for ii in self.message:
             self.message_count[ii] = self.message_count.get(ii, 0) + 1
             #Repeat for alphabet
-            for ii in self.alphabet:
-                self.alphabet_count[ii] = self.alphabet_count.get(ii, 0) + 1
+            for jj in self.alphabet:
+                self.alphabet_count[jj] = self.alphabet_count.get(jj, 0) + 1
                 #if the length of the alphabets is lower than the 
                 #let of the message..No need to proceed..return False
                 #Else return True
-                for ii, value in self.message_count.items():
-                    if self.alphabet_count.get(ii, 0) < value:
+                for kk, value in self.message_count.items():
+                    if self.alphabet_count.get(kk, 0) < value:
                         return False
         return True
             
