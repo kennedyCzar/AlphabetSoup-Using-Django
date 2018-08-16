@@ -76,7 +76,7 @@ return self.compare(self.message_count, self.alphabet_count), time.clock() - sel
 ```
 
 ##### Mathematical background
-```
+
 The intuition behind this algorithm is quite straight forward.
 1. We have a message input and also an alphabet input
   Our objective is to determine if we can write this message using
@@ -86,14 +86,13 @@ The intuition behind this algorithm is quite straight forward.
   available in the alphabet and if this is true.
   Then we can be sure to conclude mathematically using the following assumptions
   
-  Let \beta \to message
-  and \Gamma \to Alphabets 
+    &emsp;&emsp;&emsp;__if__ _&beta;_ &le; _&alpha;_
   
 2. if \beta \bigsub Alphabets
     Then we may assume indeed this word can be formed from alphabets soup.
     This would save us from writing outrageous loops ust to check this.
   
-```
+
 
 ##### Advantage of algorithm
 ```bash
