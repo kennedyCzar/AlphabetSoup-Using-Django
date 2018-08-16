@@ -52,6 +52,19 @@ depending on which is open.) OR specify your own ip and port
 
 ##### Algorithm core
 ```python
+
+#read all the letters in the message string
+        for ii in self.message:
+            self.message_count[ii] = self.message_count.get(ii, 0) + 1
+        #Repeat for alphabet
+        for ii in self.alphabet:
+            self.alphabet_count[ii] = self.alphabet_count.get(ii, 0) + 1
+            #if the length of the alphabets is lower than the 
+            #let of the message..No need to proceed..return False
+            #Else return True
+        return self.compare(self.message_count, self.alphabet_count), time.clock() - self.time
+
+#Compare function
 if sum(self.alphabet_count.values()) > sum(self.message_count.values()):
         self.compare = set(self.message_count).issubset(set(self.alphabet_count))
         if self.compare == True:
