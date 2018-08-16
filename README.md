@@ -79,11 +79,10 @@ if sum(self.alphabet_count.values()) > sum(self.message_count.values()):
 ```bash
 
 1. Time Efficient: Could be time consuming also considering it loops in N
-2. Time Coplexity: O(M*N)
+2. Time Complexity: O(M) + O(N) = O(N)--> Worst case :: Linear time
 3. Space complexity: O(1) space efficient.
-4. We could decide making it Very fast by treating the different loops
-seperate. that would give us a time complexity of O(M) + O(N) = O(N) at the
-expense of space complexity.
+4. Running in O(M * N) is a little time consuming in the order of 4.7exp(-5) but the algorithm runs
+in time within 1.2exp(-5) which is quite reasonable. This is a good thing as O(M * N) is computational expensive for deployment.
  
  See Tim Wilson's sort algorithm for further Read https://en.wikipedia.org/wiki/Timsort
  ```
