@@ -75,6 +75,26 @@ return self.compare(self.message_count, self.alphabet_count), time.clock() - sel
     raise ValueError('message cannot be greater than alphabet')
 ```
 
+##### Mathematical background
+```
+The intuition behind this algorithm is quite straight forward.
+1. We have a message input and also an alphabet input
+  Our objective is to determine if we can write this message using
+  the input alphabets.
+  
+  What we very much need to check is if the letters in the message are 
+  available in the alphabet and if this is true.
+  Then we can be sure to conclude mathematically using the following assumptions
+  
+  Let \beta \to message
+  and \Gamma \to Alphabets 
+  
+2. if \beta \bigsub Alphabets
+    Then we may assume indeed this word can be formed from alphabets soup.
+    This would save us from writing outrageous loops ust to check this.
+  
+```
+
 ##### Advantage of algorithm
 ```bash
 
