@@ -24,5 +24,23 @@ c.quicksort()
 from AlphabetSoup import AlphabetSoup
 
 
-c = AlphabetSoup('grheytheytht', 'grheytheytht')
-me = c.Alphabet()
+c = AlphabetSoup('gggggggg', 'tgfsdhdgfh')
+c.Alphabet()
+
+
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+    
