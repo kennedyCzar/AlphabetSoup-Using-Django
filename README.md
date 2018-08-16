@@ -85,11 +85,15 @@ The intuition behind this algorithm is quite straight forward.
   What we very much need to check is if the letters in the message are 
   available in the alphabet and if this is true.
   Then we can be sure to conclude mathematically using the following assumptions
-  
-    &emsp;&emsp;&emsp;__if__ _&beta;_ &le; _&alpha;_
-  
-2. if \beta \bigsub Alphabets
-    Then we may assume indeed this word can be formed from alphabets soup.
+    
+  Hence if 
+  &emsp;_v_ &larr; Alphabet and
+  &emsp; _&beta;_; is message
+ 
+  &emsp;&emsp;&emsp;__if__ _v_ &ge; _&beta;_ __then return__ TRUE and FALSE otherwise  
+   If _v_ is a superset of _&beta;_
+
+2. Then we may assume indeed this word can be formed from alphabets soup.
     This would save us from writing outrageous loops ust to check this.
   
 
