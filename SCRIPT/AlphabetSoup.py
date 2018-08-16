@@ -22,14 +22,15 @@ class AlphabetSoup(object):
         '''Arguments:
             @self: class construct
             @message: message we want to check if constructable
-            @alphabet: alphabest of words from which 
+            @alphabet: alphabet of words from which 
                         message is formed.
                         If True: Function returns True
                         Else: Function returns False
         '''
         self.message = message
         self.alphabet = alphabet
-        
+        self.message_count = {}
+        self.alphabet_count = {}
 #        #Check for None
 #        if self.message is None and self.alphabet is None:
 #            if self.message is None and self.alphabet is not None:
@@ -56,6 +57,30 @@ class AlphabetSoup(object):
         else:
             return False
     
+    def comp(self, message_count, alphabet_count):
+        '''
+        This fuction assets the message and alphabet count.
+        Checks if the alphabet contains words need to make the message
+        if True, it returns a boolean.
+        Argument:
+            @message_count: dictionary of the message entered
+            @alphabet_count: dictionary of alphabet soup
+        Return type:
+            @True: if conditions aremet and 
+                    False if otherwise
+        '''
+        try:
+            if sum(self.alphabet_count.values()) >= sum(self.message_count.values()):
+                self.compare = set(self.message_count).issubset(set(self.alphabet_count))
+                if self.compare == True:
+                    return True
+                else:
+                    return False
+            else:
+                raise ValueError('message cannot be greater than alphabet')
+        except RuntimeError as e:
+            raise(e)
+        
     def Alphabet(self):
         '''
         Argument:
@@ -66,8 +91,7 @@ class AlphabetSoup(object):
         '''
         
 #        character = self.character
-        self.message_count = {}
-        self.alphabet_count = {}
+        
         #Exception to handle Unprecedented errors
         try:
             '''
@@ -92,19 +116,19 @@ class AlphabetSoup(object):
         finally:
             pass
         
+        import time
+        self.time = time.clock()
         #read all the letters in the message string
         for ii in self.message:
             self.message_count[ii] = self.message_count.get(ii, 0) + 1
-            #Repeat for alphabet
-            for ii in self.alphabet:
-                self.alphabet_count[ii] = self.alphabet_count.get(ii, 0) + 1
-                #if the length of the alphabets is lower than the 
-                #let of the message..No need to proceed..return False
-                #Else return True
-                for ii, value in self.message_count.items():
-                    if self.alphabet_count.get(ii, 0) < value:
-                        return False
-        return True
+        #Repeat for alphabet
+        for ii in self.alphabet:
+            self.alphabet_count[ii] = self.alphabet_count.get(ii, 0) + 1
+            #if the length of the alphabets is lower than the 
+            #let of the message..No need to proceed..return False
+            #Else return True
+        return self.comp(self.message_count, self.alphabet_count), time.clock() - self.time
+            
             
             
             
