@@ -88,10 +88,10 @@ The intuition behind this algorithm is quite straight forward.
     
   Hence if 
   &emsp;_v_ &larr; Alphabet and
-  &emsp; _&beta;_; is message
+  &emsp; _&beta;_ &larr; is message
  
   &emsp;&emsp;&emsp;__if__ _v_ &ge; _&beta;_ __then return__ TRUE and FALSE otherwise  
-   If _v_ is a superset of _&beta;_
+   Meaning if _v_ is a superset of _&beta;_
 
 2. Then we may assume indeed this word can be formed from alphabets soup.
     This would save us from writing outrageous loops ust to check this.
