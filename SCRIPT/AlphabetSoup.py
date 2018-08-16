@@ -101,7 +101,7 @@ class AlphabetSoup(object):
                 #if the length of the alphabets is lower than the 
                 #let of the message..No need to proceed..return False
                 #Else return True
-                for kk, value in self.alphabet_count.items():
+                for kk, value in self.message_count.items():
                     if self.alphabet_count.get(kk, 0) < value:
                         return False
         return True
