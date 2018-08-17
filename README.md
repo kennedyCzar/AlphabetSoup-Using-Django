@@ -92,7 +92,13 @@ We then create a while loop for which:
                 we return a False
   
   
+#### Major Assumption towards solution
+```
+This Algorithm is pretty fast in concluding this a message can be formed from an Alphabet soup. This is 
+simply because we did not loop over the entire Alphabet soup but rather, over the letters.
 
+This cuts the execution time but half assuming we have thousand of words in the soup against very shourt message.
+```
 
 ## Advantage of algorithm
 ```bash
