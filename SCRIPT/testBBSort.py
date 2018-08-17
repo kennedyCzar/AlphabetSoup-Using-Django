@@ -24,19 +24,51 @@ c.quicksort()
 from AlphabetSoup import AlphabetSoup
 
 
-c = AlphabetSoup('gggggggg', 'tgfsdhdgfh')
+c = AlphabetSoup('this is what i mean', 'what i really mean')
 c.Alphabet()
 
 
+message =  'this is what i mean'
+alphabet = 'what i really mean'
+setA = set(message)
+setB = set(alphabet)
+            
+setB.intersection(setA)        
+            
+#%% TESTING NEW FUNCTION
 
-            
-            
-            
-            
-            
-            
-            
-            
+message = 'UVZQDEQTQZDFMHVMZMFGFIMCJOUJMRYIIRJTORJCCYXWHJTTZFUCEGYCHHZNFEGOXHHTXLFCVQXDFABH'
+alphabet = 'RBWGHGDTQJOJGOXFWFMPZDYYDGABTEUZHTHAZOYYXNIPNQDIODQDIZNSKZWZFXVVIRHSGNAQAPHBJPYZNCMLUWVRBOUOWLNJPSLCCHJFBHJBFSYCDVJBCEGM'
+
+import time
+def fcn(message, alphabet):
+    listA = list(message)
+    listB = list(alphabet)
+    final = []
+    start_time = time.clock()
+    while listA != []:
+        for msg in listA:
+            if msg in listB:
+                final.append(msg)
+                listA.remove(msg)
+                listB.remove(msg)
+            elif msg not in listB:
+                listA.remove(msg)
+        continue
+    if sorted(final) == sorted(list(message)):
+        return True, final, listA, listB, time.clock() - start_time
+    else:
+        return False, final, listA, listB, time.clock() - start_time
+
+fcn(message, alphabet)
+
+
+#def ret():
+#    while listA != []:
+#        print('yes')
+#        break
+#    return 'funnish'
+#ret()    
             
             
             
