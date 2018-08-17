@@ -50,7 +50,7 @@ depending on which is open.) OR specify your own ip and port
 >Enter the ip:port in any browser of choice(preferably chrome)
 ```
 
-##### Algorithm core
+## Algorithm core
 ```python
 
 #read all the letters in the message string
@@ -75,7 +75,30 @@ return self.compare(self.message_count, self.alphabet_count), time.clock() - sel
     raise ValueError('message cannot be greater than alphabet')
 ```
 
-##### Advantage of algorithm
+## Mathematical background
+
+The intuition behind this algorithm is quite straight forward.
+1. We have a message input and also an alphabet input
+  Our objective is to determine if we can write this message using
+  the input alphabets.
+  
+  What we very much need to check is if the letters in the message are 
+  available in the alphabet and if this is true.
+  Then we can be sure to conclude mathematically using the following assumptions
+    
+  Hence if 
+  &emsp;_v_ &larr; Alphabet and
+  &emsp; _&beta;_ &larr; is message
+ 
+  &emsp;&emsp;&emsp;__if__ _v_ &ge; _&beta;_ __then return__ TRUE and FALSE otherwise  
+   Meaning if _v_ is a superset of _&beta;_
+
+2. Then we may assume indeed this word can be formed from alphabets soup.
+    This would save us from writing outrageous loops ust to check this.
+  
+
+
+## Advantage of algorithm
 ```bash
 
 1. Time Efficient: Could be time consuming also considering it loops in N
@@ -87,7 +110,7 @@ in time within 1.2exp(-5) which is quite reasonable. This is a good thing as O(M
  See Tim Wilson's sort algorithm for further Read https://en.wikipedia.org/wiki/Timsort
  ```
  
- #### DjangoApp for AlphabetSoup
+ ## DjangoApp for AlphabetSoup
  
  ###### Before input
  ![Image of Django App](https://github.com/kennedyCzar/AlphabetSoup-Using-Django/blob/master/IMAGES/djangoApp.PNG)
@@ -97,7 +120,7 @@ in time within 1.2exp(-5) which is quite reasonable. This is a good thing as O(M
   ###### False output
   ![Image of Django App](https://github.com/kennedyCzar/AlphabetSoup-Using-Django/blob/master/IMAGES/false%20output.PNG)
 
-##### Final words
+## Final words
 ```
 
 The AlphaSoup algorithm is sort-like algorithm which is capable of telling if a
