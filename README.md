@@ -99,7 +99,7 @@ The intuition behind this algorithm is quite straight forward.
 ```bash
 
 1. Time Efficient: Could be time consuming also considering it loops in N
-2. Time Complexity: O(N**2)
+2. Time Complexity: O(N**2) for Worst Case
 3. Space complexity: O(1) space efficient.
 4. Running in O(N**2) is bar far not the most efficient but it gets the job don however the inputs come. I had earlier demonstrated 
     how the algorithm can run in O(M) O(N), this however wasnt the best solution as some inputs exhibited strange behaviours.
