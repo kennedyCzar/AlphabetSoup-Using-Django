@@ -75,23 +75,22 @@ else:
 ## Mathematical background
 
 The intuition behind this algorithm is quite straight forward.
-1. We have a message input and also an alphabet input
-  Our objective is to determine if we can write this message using
-  the input alphabets.
-  
-  What we very much need to check is if the letters in the message are 
-  available in the alphabet and if this is true.
-  Then we can be sure to conclude mathematically using the following assumptions
-    
-  Hence if 
-  &emsp;_v_ &larr; Alphabet and
-  &emsp; _&beta;_ &larr; is message
- 
-  &emsp;&emsp;&emsp;__if__ _v_ &ge; _&beta;_ __then return__ TRUE and FALSE otherwise  
-   Meaning if _v_ is a superset of _&beta;_
+1. We convert our message into a list for we we wan easily iterate
+2. Do the same for the alphabet soup and ensure they are structured
 
-2. Then we may assume indeed this word can be formed from alphabets soup.
-    This would save us from writing outrageous loops ust to check this.
+We then create a while loop for which:
+    if A <-- Alphabet & B is message
+        we iterate over the range of B
+            then we do same for A
+                if the element of B can be found in A
+                    Then we can form a message using this
+                 we repeat this process and
+                    store the content in another list we call final
+      finally we ckeck the final list with the message list
+        if this condition satisfies
+            the we return a boolean True otherwise
+                we return a False
+  
   
 
 
@@ -125,7 +124,7 @@ message can me form from a wordcloud or soup.
 In addition to this i have demostrated how you can use 
 this in a django application. It would be great to have a database but
 is for dmonstration purpose and a database is not required at this point. 
-Perhaps you coulc consider a database when hosting and trying to check users.
+Perhaps you could consider a database when hosting and trying to check users.
 Again this is license opensource and contributions to improve the algoritm are welcomed.
 ```
 
