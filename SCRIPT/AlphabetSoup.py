@@ -29,8 +29,6 @@ class AlphabetSoup(object):
         '''
         self.message = message
         self.alphabet = alphabet
-        self.message_count = {}
-        self.alphabet_count = {}
 #        #Check for None
 #        if self.message is None and self.alphabet is None:
 #            if self.message is None and self.alphabet is not None:
@@ -115,8 +113,8 @@ class AlphabetSoup(object):
             
 #%% TEST ALPHABETSOUP
 
-message = 'UVZQDEQTQZDFMHVMZMFGFIMCJOUJMRYTHYJRTJKUYKRIIRJTORJCCYXWHJTTZFUCEGYCHHZNFEGOXHHTXLFCVQXDFABH'
-alphabet = 'KRUYUKRRBWGHGDTQJOJGOXFWFMPZDYYDGABTEUZHTHAZOYYXNIPNQDIODQDIZNSKZWZFXVVIRHSGNAQAPHBJPYZNCMLUWVRBOUOWLNJPSLYCDVJ'      
+message = 'UVZQDEQTQZDFMHVMZMFGFIMCJOUJMRYTHYJRTJKUYKRI35636878IRJTORJCCYXWHJTTZFUCEGYCHHZNFEGOXHHTXLFCVQXDFABH'
+alphabet = 'KRUYUKRRBWGHGDTQJOJGOXFWFMPZDYYDGABTEUZH36586787479THAZOYYXNIPNQDIODQDIZNSKZWZFXVVIRHSGNAQAPHBJPYZNCMLUWVRBOUOWLNJPSLYCDVJ'      
 ASOUP = AlphabetSoup(message, alphabet)
 ASOUP.Alphabet()
 
