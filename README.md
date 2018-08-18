@@ -106,7 +106,7 @@ This cuts the execution time but half assuming we have thousand of words in the 
 ```bash
 
 1. Time Efficient: Extremely fast even while it runs in N.thanks to while loop
-2. Time Complexity: O(N**2) for Worst Case
+2. Time Complexity: O(N*logN) for Worst Case
 3. Space complexity: O(1) space efficient.
 4. Running in O(N**2) is bar far not the most efficient but it gets the job don 
     however the inputs come. I had earlier demonstrated 
