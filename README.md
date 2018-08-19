@@ -108,10 +108,15 @@ This cuts the execution time but half assuming we have thousand of words in the 
 1. Time Efficient: Extremely fast even while it runs in N.thanks to while loop
 2. Time Complexity: O(N*logN) for Worst Case
 3. Space complexity: O(1) space efficient.
-4. Running in O(N**2) is bar far not the most efficient but it gets the job don 
-    however the inputs come. I had earlier demonstrated 
-    how the algorithm can run in O(M) O(N), this however wasnt the best 
-    solution as some inputs exhibited strange behaviours.
+4. Running in O(N*logN) is by far the most efficient and it gets the job done
+    for message length less than 10. ie N < 10. for N > 10 the algorithm runs 
+    in O(N**2). I had earlier demonstrated how the algorithm can run in O(N).
+    Improving the algorithm would mean employing the rules of divide and conquer.
+    But this would be at the expense of space complexity. Hence, we conclude it is
+    time efficient in O(N*logN).
+    
+    Contributions are accepted to improve algorithms 
+    to make it run in O(N) if possible.
  
  See Tim Wilson's sort algorithm for further Read https://en.wikipedia.org/wiki/Timsort
  ```
