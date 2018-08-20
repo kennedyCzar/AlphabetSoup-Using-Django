@@ -9,10 +9,10 @@ Created on Wed Aug 15 14:00:37 2018
 '''
 AlphabetSoup algorithm
 --------------------------
-Algorithm sorts a dictionary of words compares
+Algorithm sorts a list of words compares
 them and return a boolean if a word 'message'
 can be formed from alphabet 'wordsoup'
-Time Cmomplexity: O(M*N) --> Worst case
+Time Cmomplexity: O(N*logN) --> Worst case
 Space complexity: O(1)
 
 '''
@@ -105,6 +105,15 @@ class AlphabetSoup(object):
                 elif msg not in self.listB:
                     self.listA.remove(msg)
             continue
+        
+        '''
+        The Extraweight inbuilt python soted runs
+        in O(N*logN). This happens to be the fastest
+        sorting method to reach our goal.
+        Its an adaptive merge sort.
+        
+        Hence in total we have O(N*logN) + O(N*logN) = O(N*logN)
+        '''
         if sorted(self.final) == sorted(list(self.message)):
             return True, self.final, self.listA, self.listB, time.clock() - self.start_time
         else:
@@ -113,10 +122,15 @@ class AlphabetSoup(object):
             
 #%% TEST ALPHABETSOUP
 
-message = 'UVZQDEQTQZDFMHVMZMFGFIMCJOUJMRYTHYJRTJKUYKRI35636878IRJTORJCCYXWHJTTZFUCEGYCHHZNFEGOXHHTXLFCVQXDFABH'
-alphabet = 'KRUYUKRRBWGHGDTQJOJGOXFWFMPZDYYDGABTEUZH36586787479THAZOYYXNIPNQDIODQDIZNSKZWZFXVVIRHSGNAQAPHBJPYZNCMLUWVRBOUOWLNJPSLYCDVJ'      
+message = 'UVZQDEQTQZDFMHVMZMFGFIMCJOUJMRYIIRJTORJCCYXWHJTTZFUCEGYCHHZNFEGOXHHTXLFCVQXDFABH'
+alphabet = 'RBWGHGDTQJOJGOXFWFMPZDYYDGABTEUZHTHAZOYYXNIPNQDIODQDIZNSKZWZFXVVIRHSGNAQAPHBJPYZNCMLUWVRBOUOWLNJPSLCCHJFBHJBFSYCDVJBCEGM'      
 ASOUP = AlphabetSoup(message, alphabet)
 ASOUP.Alphabet()
 
 
-    
+
+
+
+
+
+
