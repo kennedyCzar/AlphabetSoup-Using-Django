@@ -14,9 +14,11 @@ It may be a very large bowl of soup containing many letters.
 There is no guarantee that each letter occurs a similar number of times - indeed some letters might be missing entirely.
 The letters are ordered randomly.
 
-The function should determine if you can write your message with the letters found in your bowl of soup. The function should return True or False accordingly.
+The function should determine if you can write your message with the letters found in your bowl of soup. 
+The function should return True or False accordingly.
 
-Try to make your function efficient.  Please use Big-O notation to explain how long it takes your function to run in terms of the length of your message (m) and the number of letters in your bowl of soup (s).
+Try to make your function efficient.  Please use Big-O notation to explain how long it takes your function to
+run in terms of the length of your message (m) and the number of letters in your bowl of soup (s).
 
 ## Solution is Contained inside the Script folder
 ### How to Use
@@ -92,16 +94,29 @@ We then create a while loop for which:
                 we return a False
   
   
+#### Major Assumption towards solution
+```
+This Algorithm is pretty fast in concluding this a message can be formed from an Alphabet soup. This is 
+simply because we did not loop over the entire Alphabet soup but rather, over the letters.
 
+This cuts the execution time but half assuming we have thousand of words in the soup against very shourt message.
+```
 
 ## Advantage of algorithm
 ```bash
 
 1. Time Efficient: Extremely fast even while it runs in N.thanks to while loop
-2. Time Complexity: O(N**2) for Worst Case
+2. Time Complexity: O(N*logN)
 3. Space complexity: O(1) space efficient.
-4. Running in O(N**2) is bar far not the most efficient but it gets the job don however the inputs come. I had earlier demonstrated 
-    how the algorithm can run in O(M) O(N), this however wasnt the best solution as some inputs exhibited strange behaviours.
+4. Running in O(N*logN) is by far the most efficient and it gets the job done
+    for message length less than 10. ie N < 10. for N > 10 the algorithm runs 
+    in O(N**2). I had earlier demonstrated how the algorithm can run in O(N).
+    Improving the algorithm would mean employing the rules of divide and conquer.
+    But this would be at the expense of space complexity. Hence, we conclude it is
+    time efficient in O(N*logN).
+    
+    Contributions are accepted to improve algorithms 
+    to make it run in O(N) if possible.
  
  See Tim Wilson's sort algorithm for further Read https://en.wikipedia.org/wiki/Timsort
  ```
