@@ -71,8 +71,34 @@ fcn(message, alphabet)
 #ret()    
             
             
-            
-            
+#%% quicksort 
+
+def quicksort(list_seq):
+    
+    '''
+    Arguments:
+        @seq: list of intergers
+        @Return: A list or array of sorted integers
+        
+    '''
+    #if the list in the array is less than 1 return same
+    #no need to sort
+
+    if list_seq is None:
+        return []
+    elif len(list_seq) <= 1:
+        return list_seq
+    else:
+        pivot_point = list_seq[0]
+        left, right = [], []
+        for ii in list_seq[1:]:
+            if ii < pivot_point:
+                left.append(ii)
+            else:
+                right.append(ii)
+    return quicksort(left)+ [pivot_point]+ quicksort(right)
+          
+quicksort([7,1,6, 3, 0, 1])           
             
             
     
