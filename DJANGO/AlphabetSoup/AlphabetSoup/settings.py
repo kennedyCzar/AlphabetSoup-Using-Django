@@ -25,7 +25,10 @@ SECRET_KEY = 'l+kyj074@3_pte8a0b@wsuo(_a%0b!qg@+5r&)w&(7kl6&y9li'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
+import dj_database_url
+db_from_env = dj_database_url.config(conn_max_age=500)
+
 
 
 # Application definition
@@ -119,3 +122,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
+STATIC_ROOT = STATIC_ROOT = 'AlphabetSoup/static/'
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
