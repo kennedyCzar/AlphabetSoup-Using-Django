@@ -1,4 +1,4 @@
-# AlphabetSoup-Using-Django
+# AlphabetSoup-Using-Django [![Hosted Live](https://img.shields.io/badge/Hosted-Live-brightgreen.svg?style=flat)](https://alphabetsoup.herokuapp.com/)
 Everyone loves alphabet soup.  And of course, you want to know if you can construct a message from the letters found in your bowl.
 ```
 Task:
