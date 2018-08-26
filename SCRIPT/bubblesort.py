@@ -21,7 +21,7 @@ Space complexity: O(n**2)
 
 """
 import time
-class sort(object):
+class bubblesort(object):
     def __init__(self, list_seq):
         '''
         Argument:
@@ -48,18 +48,9 @@ class sort(object):
         return self.list_seq, 'Running time {}secs'.format(time.clock() - self.start_time)
     
     
-class quicksort(object):
-    
-    def __init__(self, list_seq):
-        '''
-        Argument:
-            @self: refer to the init argument
-            @list_seq: refer to the list of array we want to sort
-            @Return: list or array of sorted integers.
-        '''
-        self.list_seq = list_seq
+class Qksort:
         
-    def quicksort(self):
+    def quicksort(list_seq):
         
         '''
         Arguments:
@@ -69,21 +60,23 @@ class quicksort(object):
         '''
         #if the list in the array is less than 1 return same
         #no need to sort
-        if self.list_seq is None:
-            raise('Empty array')
-        elif len(self.list_seq) <= 1:
-            return self.list_seq
+    
+        if list_seq is None:
+            return []
+        elif len(list_seq) <= 1:
+            return list_seq
         else:
-            self.middle_point = self.list_seq[0]
-            self.left, self.right = [], []
-            for ii in self.list_seq[1:]:
-                if ii < self.middle_point:
-                    self.left.append(ii)
+            pivot_point = list_seq[0]
+            left, right = [], []
+            for ii in list_seq[1:]:
+                if ii < pivot_point:
+                    left.append(ii)
                 else:
-                    self.list_seq.append(ii)
-        return self.quicksort(self.left), [self.middle_point], self.quicksort(self.right)
-                    
+                    right.append(ii)
+        return quicksort(left)+ [pivot_point]+ quicksort(right)
                     
 
+#%% test quicksort                 
 
-            
+Qksort.quicksort([3, 6, 8, 2, 4])
+        
