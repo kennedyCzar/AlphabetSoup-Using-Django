@@ -60,7 +60,8 @@ class Qksort:
         '''
         #if the list in the array is less than 1 return same
         #no need to sort
-    
+        
+        start_time = time.clock()
         if list_seq is None:
             return []
         elif len(list_seq) <= 1:
@@ -73,10 +74,31 @@ class Qksort:
                     left.append(ii)
                 else:
                     right.append(ii)
-        return quicksort(left)+ [pivot_point]+ quicksort(right)
+        #return time.clock() - start_time
+        return Qksort.quicksort(left)+ [pivot_point]+ Qksort.quicksort(right)
                     
 
 #%% test quicksort                 
 
 Qksort.quicksort([3, 6, 8, 2, 4])
-        
+bubblesort([3, 6, 8, 2, 4]).bubblesort()
+
+
+'''
+Compare perfomance:
+    
+    Qksort.quicksort([3, 6, 8, 2, 4])
+    Out[69]: 1.9753092601604294e-06
+    
+   bubblesort([3, 6, 8, 2, 4]).bubblesort()
+   Out[96]: ([2, 3, 4, 6, 8], 'Running time 9.086423688131617e-06secs') 
+   
+Conclusion:
+            Shows from the outpu that QuickSort is 
+            9X faster than bubblesort. Meaning Bubblesort took 
+            9X the time to sort the number.
+            So for deployment you could employ divide and conquer 
+            in design of your algorithm.
+            
+    
+'''
