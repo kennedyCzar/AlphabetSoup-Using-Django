@@ -94,9 +94,9 @@ Compare perfomance:
    Out[96]: ([2, 3, 4, 6, 8], 'Running time 9.086423688131617e-06secs') 
    
 Conclusion:
-            Shows from the outpu that QuickSort is 
+            Shows from the output that QuickSort is almost
             9X faster than bubblesort. Meaning Bubblesort took 
-            9X the time to sort the number.
+            9X the time to sort the numbers.
             So for deployment you could employ divide and conquer 
             in design of your algorithm.
             
