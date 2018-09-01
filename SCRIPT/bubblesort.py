@@ -16,8 +16,8 @@ Space complexity: O(1)
 Quick sort algorithm
 ------------------------------
 Uses partitioning or recursive divide and conquer of the list
-Time Cmomplexity: O(n**2)
-Space complexity: O(n**2)
+Time Cmomplexity: O(N*LogN)
+Space complexity: O(1)
 
 """
 import time
