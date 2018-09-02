@@ -7,6 +7,12 @@ Compare perfomance:
     
      bubblesort([3, 6, 8, 2, 4]).bubblesort()
      Out[96]: ([2, 3, 4, 6, 8], 'Running time 9.086423688131617e-06secs') 
+     
+     message = 'UVZQDEQ'
+     alphabet = 'RBWGHGDT'      
+     ASOUP = AlphabetSoup(message, alphabet)
+     ASOUP.Alphabet()
+     Out[51]: (False, ['D'], [], ['R', 'B', 'W', 'G', 'H', 'G', 'T'], 1.1061732948292047e-05)
    
 Conclusion:
 
