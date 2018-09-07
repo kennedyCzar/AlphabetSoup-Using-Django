@@ -131,6 +131,8 @@ This cuts the execution time but half assuming we have thousand of words in the 
   ###### False output
   ![Image of Django App](https://github.com/kennedyCzar/AlphabetSoup-Using-Django/blob/master/IMAGES/false%20output.PNG)
 
+Or Just Download the EXE Zipped folder and extract the .EXE file. Run program and Voila.
+  ![Image of Django App](https://github.com/kennedyCzar/AlphabetSoup-Using-Django/blob/master/IMAGES/TKinter%20App.PNG)
 ## Final words
 ```
 
