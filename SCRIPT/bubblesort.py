@@ -91,8 +91,7 @@ class BinarySearch(object):
             Time: O(logN)
             Space: O(1)
         '''
-        self.low = 0
-        self.high = len(self.sequence) - 1
+        self.low, self.high = 0, len(self.sequence) - 1
         
         self.start_time = time.clock()
         while self.low <= self.high:
