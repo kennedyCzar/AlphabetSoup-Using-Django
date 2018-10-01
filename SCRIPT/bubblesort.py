@@ -78,11 +78,55 @@ class Qksort:
         return Qksort.quicksort(left)+ [pivot_point]+ Qksort.quicksort(right)
                     
 
-#%% test quicksort                 
+class BinarySearch(object):
+    def __init__(self, sequence):
+        self.sequence = sequence
+        
+    def Divide_and_conquer(self):
+        '''Arguments:
+            Sequence: sequence of integers to search
+            element: element to search for in the sequence
+            
+        Complexity:
+            Time: O(logN)
+            Space: O(1)
+        '''
+        self.low = 0
+        self.high = len(self.sequence) - 1
+        
+        self.start_time = time.clock()
+        while self.low <= self.high:
+            mid = (self.low + self.high) // 2
+            
+            if self.sequence[mid] < mid:
+                self.low = mid + 1
+            elif self.sequence[mid] > mid:
+                self.high = mid - 1
+            else:
+                return self.sequence[mid], time.clock() - self.start_time
+        return 'key not found'
+    
+    def Naive_code(self):
+        '''
+        Argument:
+            takes a sequence number
+            
+        Complexity:
+            Time: O(N)
+            Space: O(1)
+        '''
+        self.start_time = time.clock()
+        for seq_no in range(len(self.sequence)):
+            if self.sequence[seq_no] == seq_no:
+                return self.sequence[seq_no], time.clock() - self.start_time
+        return 'key not found'
 
+#%% test quicksort                 
+A = [-2, -1, 2, 4, 8]
 Qksort.quicksort([3, 6, 8, 2, 4])
 bubblesort([3, 6, 8, 2, 4]).bubblesort()
-
+BinarySearch(A).Divide_and_conquer()
+BinarySearch(A).Naive_code()
 
 '''
 Compare perfomance:
@@ -99,6 +143,26 @@ Conclusion:
             9X the time to sort the numbers.
             So for deployment you could employ divide and conquer 
             in design of your algorithm.
-            
+
+BinarySearch(A).Divide_and_conquer()
+Out[64]: (2, 1.5802462892854165e-06)
+
+BinarySearch(A).Naive_code()
+Out[65]: (2, 2.7654310059688214e-06)        
     
 '''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
