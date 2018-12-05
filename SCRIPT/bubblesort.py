@@ -120,6 +120,76 @@ class BinarySearch(object):
                 return self.sequence[seq_no], time.clock() - self.start_time
         return 'key not found'
 
+    
+def MAx(list_seq):
+  '''
+  Return a function that returns the maximum
+  of a given list
+  
+  Init Argument:
+    List: List of numbers to sort
+    
+  :Return:
+    Maximum number in list
+  '''
+  
+  if list_seq is None:
+    return None
+  elif len(list_seq) <= 1:
+    return list_seq
+  else:
+    left, right = [], []
+    pivot = list_seq[0]
+    for ii in list_seq[1:]:
+      if ii <= pivot:
+        left.append(ii)
+      else:
+        right.append(ii)
+    #the we return the last number
+    #on the right  of the list
+    #This number should be the maximum
+    return right[-1]
+  
+  
+def MIn(list_seq):
+  '''
+  Return a function that returns the Minimum
+  of a given list
+  
+  Init Argument:
+    List: List of numbers to sort
+    
+  :Return:
+    Minimum number in list
+  '''
+  
+  if list_seq is None:
+    return None
+  elif len(list_seq) <= 1:
+    return list_seq
+  else:
+    left, right = [], []
+    pivot = list_seq[0]
+    for ii in list_seq[1:]:
+      if ii <= pivot:
+        left.append(ii)
+      else:
+        right.append(ii)
+    #the we return the last number
+    #on the right  of the list
+    #This number should be the maximum
+    return left[0]
+            
+
+
+
+#%%
+    
+MIn([12, 32, 4, 12, 45, 2])
+MAx([12, 32, 4, 12, 45, 2])
+
+    
+
 #%% test quicksort                 
 A = [-2, -1, 2, 4, 8]
 Qksort.quicksort([3, 6, 8, 2, 4])
