@@ -33,7 +33,7 @@ def maxProfit(x):
     endBuy = 0
     sell = 0
     for ii in range(len(x)):
-        for ij in range(ii, len(x)):
+        for ij in range(ii+1, len(x)):
             if (x[ij] - x[ii]) > maxprofit:
                 maxprofit = x[ij] - x[ii]
                 buy = x[ii]
