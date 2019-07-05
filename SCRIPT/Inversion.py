@@ -23,7 +23,7 @@ def inversion(x):
     '''
     inversions = 0
     for ii in range(len(x)):
-        for ij in range(ii, len(x)):
+        for ij in range(ii+1, len(x)):
             if x[ii] > x[ij]: inversions+=1
     
     return inversions
