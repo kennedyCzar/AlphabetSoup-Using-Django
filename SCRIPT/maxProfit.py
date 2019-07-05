@@ -19,7 +19,8 @@ def maxProfit(x):
     :param: x: list of stock prices from day 0...n
     :return type: maxprofit with buy/sell price
     
-    Time: O(N**N). Can be better than O(N**N). 
+    Time: O(N**2). Can be better than O(N**2). 
+                    In linear time maybe.
         
     ex:
     >> x =  [100, 180, 260, 310, 40, 535, 695]
