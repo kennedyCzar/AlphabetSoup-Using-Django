@@ -21,6 +21,8 @@ def maxProfit(x):
     
     Time: O(N**2). Can be better than O(N**2). 
                     In linear time maybe.
+                    
+    Space: O(1)
         
     ex:
     >> x =  [100, 180, 260, 310, 40, 535, 695]
