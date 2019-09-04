@@ -48,11 +48,7 @@ def maxProfit(x):
         return 'buy @{}USD :: profit :{}USD'.format(buy, maxprofit)
     else:
         return 'sell @{}USD :: profit :{}USD'.format(sell, maxprofit)
-
-       
-        
-        
-        
+  
         
         
         
